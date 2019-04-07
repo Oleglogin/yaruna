@@ -12,8 +12,8 @@
         <nav role="navigation" class="probootstrap-nav hidden-xs">
             <ul class="probootstrap-main-nav">
                 <li><a href="index">Home</a></li>
-                <li class="active"><a href="portfolio">Portfolio</a></li>
-                <li><a href="model">Models</a></li>
+                <li><a href="portfolio">Portfolio</a></li>
+                <li class="active"><a href="model">Models</a></li>
                 <li><a href="about">About</a></li>
                 <li><a href="contact">Contact</a></li>
             </ul>
@@ -25,7 +25,7 @@
                     <li><a href="#"><i class="icon-facebook"></i></a></li>
                     <li><a href="#"><i class="icon-instagram2"></i></a></li>
                 </ul>
-                <p><small>&copy; Copyright 2017 ProBootstrap:Format. All Rights Reserved.</small></p>
+                <p><small>&copy; Copyright 2019 ProBootstrap:Format. All Rights Reserved.</small></p>
             </div>
         </nav>
     </div>
@@ -50,14 +50,14 @@
 <section id="next-section">
     <div class="container-fluid">
         <div class="row probootstrap-gutter0">
-            <c:forEach items="${workList}" var="work">
+            <c:forEach items="${modelList}" var="model">
                 <div class="col-md-4 col-sm-6">
-                    <a href="portfolio-single" class="probootstrap-hover-overlay">
-                        <img src="${work.image}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive">
+                    <a href="model-single" class="probootstrap-hover-overlay">
+                        <img src="${model.modelImg}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive">
                         <div class="probootstrap-text-overlay">
-                            <h3>${work.title}</h3>
-                            <p>${work.style}</p>
-                            <%--<a href="<c:url value='/portfolioRemove/${work.id}'/>">Delete</a>--%>
+                            <h3>${model.modelTitle}</h3>
+                            <p>${model.modelStyle}</p>
+                                <%--<a href="<c:url value='/modelRemove/${work.id}'/>">Delete</a>--%>
                         </div>
                     </a>
                 </div>

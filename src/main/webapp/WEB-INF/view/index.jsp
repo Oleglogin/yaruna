@@ -1,3 +1,5 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%@include file="tmp/header.jsp" %>
 <!-- START: header -->
@@ -12,9 +14,11 @@
             <ul class="probootstrap-main-nav">
                 <li class="active"><a href="index">Home</a></li>
                 <li><a href="portfolio">Portfolio</a></li>
-                <li><a href="products">Models</a></li>
+                <li><a href="model">Models</a></li>
+                <li><a href="#" data-toggle="modal" data-target="#myModal">Registration</a></li>
                 <li><a href="about">About</a></li>
                 <li><a href="contact">Contact</a></li>
+                <li><a href="admin">Admin</a></li>
             </ul>
             <div class="extra-text visible-xs">
                 <a href="#" class="probootstrap-burger-menu"><i>Menu</i></a>
@@ -196,6 +200,44 @@
         </div>
 </footer>
 <!-- END: footer -->
+<!-- Modal1 -->
+<div id="myModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" data-dismiss="modal">x</button>
+                <h4 class="modal-title">Registration</h4>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 probootstrap-animate">
+                            <c:url value="/user/add" var="addUser"/>
+                            <form:form action="${addUser}" method="post" class="probootstrap-form" modelAttribute="emptyUser">
+                                <div class="form-group">
+                                    <label for="name">Login</label>
+                                    <form:input path="username" type="text" class="form-control"  name="name"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <form:input path="email" type="email" class="form-control"  name="email"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="subject">Password</label>
+                                    <form:input path="password" type="password" class="form-control"  name="subject"/>
+                                </div>
+                                <form:input type="hidden" path="id" readonly="true"/>
+                                <div class="form-group">
+                                    <input type="submit" class="btn btn-primary"  name="submit" value="Save">
+                                </div>
+                            </form:form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
