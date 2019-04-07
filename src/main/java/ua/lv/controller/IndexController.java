@@ -14,6 +14,11 @@ public class IndexController {
     UserService userService;
 
     @GetMapping("/")
+    public String toMain(){
+        return "index";
+    }
+
+    @GetMapping("/index")
     public String toIndex(){
         return "index";
     }
