@@ -5,6 +5,7 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.persistence.*;
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 /**
  * Created by User on 07.04.2019.
@@ -20,11 +21,21 @@ public class Modelka {
     private String modelDescription;
     private String modelImg;
 
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "modelka")
+    private List<ElseImg> elseImgList;
+
     public Modelka() {
     }
 
     public Modelka(String modelTitle, String modelDescription, String modelImg) {
         this.modelTitle = modelTitle;
+        this.modelDescription = modelDescription;
+        this.modelImg = modelImg;
+    }
+
+    public Modelka(String modelTitle, String modelStyle, String modelDescription, String modelImg) {
+        this.modelTitle = modelTitle;
+        this.modelStyle = modelStyle;
         this.modelDescription = modelDescription;
         this.modelImg = modelImg;
     }

@@ -1,10 +1,9 @@
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@include file="tmp/header.jsp" %>
 <!-- START: header -->
 <header role="banner" class="probootstrap-header">
     <div class="container-fluid">
-        <a href="index" class="probootstrap-logo">Yaruna Site></a>
+        <a href="<c:url value='index'/>" class="probootstrap-logo">Format</a>
 
         <a href="#" class="probootstrap-burger-menu visible-xs" ><i>Menu</i></a>
         <div class="mobile-menu-overlay"></div>
@@ -25,20 +24,21 @@
                     <li><a href="#"><i class="icon-facebook"></i></a></li>
                     <li><a href="#"><i class="icon-instagram2"></i></a></li>
                 </ul>
-                <p><small>&copy; Copyright 2017 ProBootstrap:Format. All Rights Reserved.</small></p>
+                <p><small>&copy; Copyright 2019 ProBootstrap:Format. All Rights Reserved.</small></p>
             </div>
         </nav>
     </div>
 </header>
 <!-- END: header -->
+
 <!-- START: section -->
-<section class="probootstrap-intro" style="background-image: url(../../resources/img/hero_bg_2.jpg);" data-stellar-background-ratio="0.5">
+<section class="probootstrap-intro" style="background-image: url(img/hero_bg_2.jpg);" data-stellar-background-ratio="0.5">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-7 probootstrap-intro-text">
-                <h1 class="probootstrap-animate">I am creative girl based in Lviv and New York</h1>
+                <h1 class="probootstrap-animate">Project Title Here</h1>
                 <div class="probootstrap-subtitle probootstrap-animate">
-                    <h2>something write to be beautiful, very expensive, glamour and something else. <a href="https://probootstrap.com/" target="_blank">yaruna.com</a></h2>
+                    <h2>A free html website template for creative agency like you! brought to you by <a href="https://probootstrap.com/" target="_blank">ProBootstrap.com</a></h2>
                 </div>
                 <p class="watch-intro probootstrap-animate"><a href="https://vimeo.com/45830194" class="popup-vimeo">Watch the video <i class="icon-play2"></i></a></p>
             </div>
@@ -47,24 +47,35 @@
     <a class="probootstrap-scroll-down js-next" href="#next-section">Scroll down <i class="icon-chevron-down"></i></a>
 </section>
 <!-- END: section -->
-<section id="next-section">
-    <div class="container-fluid">
-        <div class="row probootstrap-gutter0">
-            <c:forEach items="${workList}" var="work">
-                <div class="col-md-4 col-sm-6">
-                    <a href="<c:url value='portfolio-single/${work.id}'/>" class="probootstrap-hover-overlay">
-                        <img src="${work.image}" alt="interior" class="img-responsive">
-                        <div class="probootstrap-text-overlay">
-                            <h3>${work.title}</h3>
-                            <p>${work.style}</p>
-                            <%--<a href="<c:url value='/portfolioRemove/${work.id}'/>">Delete</a>--%>
-                        </div>
-                    </a>
-                </div>
-            </c:forEach>
+<section id="next-section" class="probootstrap-section">
+    <div class="container">
+        <div class="col-md-3 col-md-push-9">
+            <h2>Description</h2>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+            <p class="mb20">
+                <strong class="probootstrap-black-color">Role:</strong> <br>
+                ${work.style} <br>
+                Branding <br>
+                Mobile Design
+            </p>
+            <p class="mb50">
+                <strong class="probootstrap-black-color">Client</strong> <br>
+                Google, Inc.
+            </p>
+
+            <p>
+                <a href="#" role="button" class="btn btn-primary">Visit Website</a>
+            </p>
+        </div>
+        <div class="col-md-9 col-md-pull-3">
+            <p><a href="${work.image}" class="image-popup"><img src="${work.image}" alt="Interior" class="img-responsive"></a></p>
+            <%--<p><a href="img/img_2.jpg" class="image-popup"><img src="img/img_2.jpg" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></a></p>--%>
+            <%--<p><a href="img/img_4.jpg" class="image-popup"><img src="img/img_4.jpg" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></a></p>--%>
         </div>
     </div>
 </section>
+
+<!-- START: section -->
 <section class="probootstrap-section probootstrap-section-colored">
     <div class="container">
         <div class="row text-center">
@@ -100,6 +111,5 @@
     </div>
 </footer>
 <!-- END: footer -->
-
 
 <%@include file="tmp/footer.jsp" %>

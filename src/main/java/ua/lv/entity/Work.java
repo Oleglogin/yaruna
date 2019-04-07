@@ -5,6 +5,7 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.persistence.*;
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 /**
  * Created by User on 07.04.2019.
@@ -19,6 +20,11 @@ public class Work {
     private String description;
     private String style;
     private String image;
+
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "work")
+    private List<ElseImg> elseImgList;
+
+
 
     public Work() {
     }
@@ -74,5 +80,13 @@ public class Work {
             e.printStackTrace();
         }
         this.image = "\\workImg\\" + multipartFile.getOriginalFilename();
+    }
+
+    public List<ElseImg> getElseImgList() {
+        return elseImgList;
+    }
+
+    public void setElseImgList(List<ElseImg> elseImgList) {
+        this.elseImgList = elseImgList;
     }
 }

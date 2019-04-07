@@ -23,6 +23,8 @@ public class AdminController {
     public String toAdmin(Model model){
         model.addAttribute("emptyWork", new Work());
         model.addAttribute("emptyModel", new Modelka());
+        model.addAttribute("workList", workService.workList());
+        model.addAttribute("modelList",modelcaService.findAll());
         return "admin";
     }
 }
