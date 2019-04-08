@@ -5,19 +5,19 @@
 <!-- START: header -->
 <header role="banner" class="probootstrap-header">
     <div class="container-fluid">
-        <a href="index" class="probootstrap-logo">Yaruna Site</a>
+        <a href="/index" class="probootstrap-logo">Yaruna Site</a>
 
         <a href="#" class="probootstrap-burger-menu visible-xs" ><i>Menu</i></a>
         <div class="mobile-menu-overlay"></div>
 
         <nav role="navigation" class="probootstrap-nav hidden-xs">
             <ul class="probootstrap-main-nav">
-                <li><a href="index">Home</a></li>
-                <li><a href="portfolio">Portfolio</a></li>
-                <li><a href="model">Models</a></li>
+                <li><a href="/index">Home</a></li>
+                <li><a href="/portfolio">Portfolio</a></li>
+                <li><a href="/model">Models</a></li>
                 <li><a href="#" data-toggle="modal" data-target="#myModal">Registration</a></li>
-                <li><a href="about">About</a></li>
-                <li><a href="contact">Contact</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
                 <li  class="active"><a href="admin">Admin</a></li>
             </ul>
             <div class="extra-text visible-xs">
@@ -38,6 +38,29 @@
 <section class="next-section">
     <div class="container">
         <div class="row">
+
+            <div class="col-md-8">
+                <div class="probootstrap-footer-widget">
+                    <h2 class="text-center">Interior</h2>
+                    <c:forEach items="${workList}" var="work">
+                        <div class="col-md-2">
+                            <ul class="probootstrap-product-list">
+                                <li class="mb20">
+                                    <a href="#">
+                                        <h4>${work.title}</h4>
+                                        <figure><a href="elseImg/${work.id}"><img src="${work.image}" alt="interior" class="img-responsive"></a></figure>
+                                        <div class="text">
+                                            <p>${work.description}</p>
+                                            <a href="portfolioRemove/${work.id}">remove</a>
+                                            <p class="secondary-color rate"><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-half"></i></p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </c:forEach>
+                </div>
+            </div>
 
             <div class="col-md-4">
                 <div class="probootstrap-footer-widget">
@@ -73,18 +96,27 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+        </div>
+    </div>
+</section>
+
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
                 <div class="probootstrap-footer-widget">
-                    <c:forEach items="${workList}" var="work">
+                    <h2 class="text-center">Models</h2>
+                    <c:forEach items="${modelList}" var="models">
                         <div class="col-md-4">
                             <ul class="probootstrap-product-list">
                                 <li class="mb20">
                                     <a href="#">
-                                        <h4>${work.title}</h4>
-                                        <figure><a href="elseImg/${work.id}"><img src="${work.image}" alt="interior" class="img-responsive"></a></figure>
+                                        <h4>${models.modelTitle}</h4>
+                                        <figure><a href="elseImg/${models.id}"><img src="${models.modelImg}" alt="interior" class="img-responsive"></a></figure>
                                         <div class="text">
-                                            <p>${work.description}</p>
-                                            <a href="portfolioRemove/${work.id}">remove</a>
+                                            <p>${models.modelDescription}</p>
+                                            <a href="modelRemove/${model.id}">remove</a>
                                             <p class="secondary-color rate"><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-half"></i></p>
                                         </div>
                                     </a>
@@ -94,14 +126,7 @@
                     </c:forEach>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
 
-
-<section>
-    <div class="container">
-        <div class="row">
             <div class="col-md-4">
                 <div class="probootstrap-footer-widget">
                     <div class="col-md-10 col-sm-8 mp-50">
@@ -136,28 +161,30 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="probootstrap-footer-widget">
-                    <c:forEach items="${modelList}" var="models">
-                        <div class="col-md-4">
-                            <ul class="probootstrap-product-list">
-                                <li class="mb20">
-                                    <a href="#">
-                                        <h4>${models.modelTitle}</h4>
-                                        <figure><a href="elseImg/${models.id}"><img src="${models.modelImg}" alt="interior" class="img-responsive"></a></figure>
-                                        <div class="text">
-                                            <p>${models.modelDescription}</p>
-                                            <a href="modelRemove/${model.id}">remove</a>
-                                            <p class="secondary-color rate"><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-half"></i></p>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </c:forEach>
-                </div>
-            </div>
+
         </div>
     </div>
 </section>
+<footer class="probootstrap-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="probootstrap-footer-social">
+                    <li><a href="#"><i class="icon-twitter"></i></a></li>
+                    <li><a href="#"><i class="icon-facebook"></i></a></li>
+                    <li><a href="#"><i class="icon-github"></i></a></li>
+                    <li><a href="#"><i class="icon-dribbble"></i></a></li>
+                    <li><a href="#"><i class="icon-linkedin"></i></a></li>
+                    <li><a href="#"><i class="icon-youtube"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- END row -->
+        <div class="row">
+            <div class="col-md-12 copyright text-center">
+                <p>&copy; 2017 <a href="https://probootstrap.com/">ProBootstrap:FineOak</a>. All Rights Reserved. <br> Designed &amp; Developed with <i class="icon icon-heart"></i> by <a href="https://probootstrap.com/">ProBootstrap.com</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
 <%@include file="tmp/footer.jsp" %>

@@ -5,7 +5,7 @@
 <!-- START: header -->
 <header role="banner" class="probootstrap-header">
     <div class="container-fluid">
-        <a href="index" class="probootstrap-logo">Yaruna Site</a>
+        <a href="/index" class="probootstrap-logo">Yaruna Site</a>
 
         <a href="#" class="probootstrap-burger-menu visible-xs" ><i>Menu</i></a>
         <div class="mobile-menu-overlay"></div>
@@ -13,12 +13,12 @@
         <nav role="navigation" class="probootstrap-nav hidden-xs">
             <ul class="probootstrap-main-nav">
                 <li class="active"><a href="index">Home</a></li>
-                <li><a href="portfolio">Portfolio</a></li>
-                <li><a href="model">Models</a></li>
+                <li><a href="/portfolio">Portfolio</a></li>
+                <li><a href="/model">Models</a></li>
                 <li><a href="#" data-toggle="modal" data-target="#myModal">Registration</a></li>
-                <li><a href="about">About</a></li>
-                <li><a href="contact">Contact</a></li>
-                <li><a href="admin">Admin</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/admin">Admin</a></li>
             </ul>
             <div class="extra-text visible-xs">
                 <a href="#" class="probootstrap-burger-menu"><i>Menu</i></a>

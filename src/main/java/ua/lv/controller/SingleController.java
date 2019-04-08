@@ -25,6 +25,7 @@ public class SingleController {
     public String toPortfolio(@PathVariable("id") int id,
                               Model model){
         model.addAttribute("work",workService.findOne(id));
+        model.addAttribute("models", modelcaService.findOne(id));
         model.addAttribute("elseImgList",elseImgService.elseImgList());
         return "portfolio-single";
     }

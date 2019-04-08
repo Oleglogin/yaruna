@@ -4,18 +4,18 @@
 <!-- START: header -->
 <header role="banner" class="probootstrap-header">
     <div class="container-fluid">
-        <a href="index" class="probootstrap-logo">Yaruna Site></a>
+        <a href="/index" class="probootstrap-logo">Yaruna Site></a>
 
         <a href="#" class="probootstrap-burger-menu visible-xs" ><i>Menu</i></a>
         <div class="mobile-menu-overlay"></div>
 
         <nav role="navigation" class="probootstrap-nav hidden-xs">
             <ul class="probootstrap-main-nav">
-                <li><a href="index">Home</a></li>
-                <li class="active"><a href="portfolio">Portfolio</a></li>
-                <li><a href="model">Models</a></li>
-                <li><a href="about">About</a></li>
-                <li><a href="contact">Contact</a></li>
+                <li><a href="/index">Home</a></li>
+                <li class="active"><a href="/portfolio">Portfolio</a></li>
+                <li><a href="/model">Models</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
             </ul>
             <div class="extra-text visible-xs">
                 <a href="#" class="probootstrap-burger-menu"><i>Menu</i></a>

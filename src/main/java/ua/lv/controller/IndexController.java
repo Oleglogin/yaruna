@@ -18,13 +18,13 @@ public class IndexController {
     @GetMapping("/")
     public String toMain(Model model){
         model.addAttribute("emptyUser", new User());
-        return "index";
+        return "/index";
     }
 
     @GetMapping("/index")
     public String toIndex(Model model){
         model.addAttribute("emptyUser", new User());
-        return "index";
+        return "/index";
     }
 
 }

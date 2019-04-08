@@ -3,18 +3,18 @@
 <!-- START: header -->
 <header role="banner" class="probootstrap-header">
     <div class="container-fluid">
-        <a href="<c:url value='index'/>" class="probootstrap-logo">Format</a>
+        <a href="<c:url value='/index'/>" class="probootstrap-logo">Format</a>
 
         <a href="#" class="probootstrap-burger-menu visible-xs" ><i>Menu</i></a>
         <div class="mobile-menu-overlay"></div>
 
         <nav role="navigation" class="probootstrap-nav hidden-xs">
             <ul class="probootstrap-main-nav">
-                <li><a href="index">Home</a></li>
-                <li class="active"><a href="portfolio">Portfolio</a></li>
-                <li><a href="model">Models</a></li>
-                <li><a href="about">About</a></li>
-                <li><a href="contact">Contact</a></li>
+                <li><a href="/index">Home</a></li>
+                <li class="active"><a href="/portfolio">Portfolio</a></li>
+                <li><a href="/model">Models</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
             </ul>
             <div class="extra-text visible-xs">
                 <a href="#" class="probootstrap-burger-menu"><i>Menu</i></a>
@@ -67,15 +67,31 @@
                 <a href="#" role="button" class="btn btn-primary">Visit Website</a>
             </p>
         </div>
-        <div class="col-md-9 col-md-pull-3">
-            <p><a href="${work.image}" class="image-popup"><img src="${work.image}" alt="Interior" class="img-responsive"></a></p>
+        <c:if test="${!empty work}">
+            <div class="col-md-9 col-md-pull-3">
+                <p><a href="${work.image}" class="image-popup"><img src="${work.image}" alt="Interior" class="img-responsive"></a></p>
 
-            <c:forEach items="${elseImgList}" var="elseImg">
-                <c:if test="${work.id == elseImg.work.id}">
-                    <p><a href="${elseImg.img}" class="image-popup"><img src="${elseImg.img}" alt="Interior" class="img-responsive"></a></p>
-                </c:if>
-            </c:forEach>
-        </div>
+                <c:forEach items="${elseImgList}" var="elseImg">
+                    <c:if test="${work.id == elseImg.work.id}">
+                        <p><a href="${elseImg.img}" class="image-popup"><img src="${elseImg.img}" alt="Interior" class="img-responsive"></a></p>
+                    </c:if>
+                </c:forEach>
+            </div>
+        </c:if>
+
+        <c:if test="${!empty models}">
+            <div class="col-md-9 col-md-pull-3">
+                <p><a href="${models.modelImg}" class="image-popup"><img src="${models.modelImg}" alt="Interior" class="img-responsive"></a></p>
+
+                <c:forEach items="${elseImgList}" var="elseImg">
+                    <c:if test="${models.id == elseImg.modelka.id}">
+                        <p><a href="${elseImg.img}" class="image-popup"><img src="${elseImg.img}" alt="Interior" class="img-responsive"></a></p>
+                    </c:if>
+                </c:forEach>
+            </div>
+        </c:if>
+
+
     </div>
 </section>
 
