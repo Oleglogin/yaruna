@@ -52,7 +52,7 @@
         <div class="row probootstrap-gutter0">
             <c:forEach items="${modelList}" var="model">
                 <div class="col-md-4 col-sm-6">
-                    <a href="model-single" class="probootstrap-hover-overlay">
+                    <a href="<c:url value='portfolio-single/${model.id}'/>" class="probootstrap-hover-overlay">
                         <img src="${model.modelImg}" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive">
                         <div class="probootstrap-text-overlay">
                             <h3>${model.modelTitle}</h3>

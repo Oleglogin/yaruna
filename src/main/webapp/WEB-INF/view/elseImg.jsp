@@ -54,22 +54,42 @@
 
         <div class="col-md-9">
             <p><a href="${work.image}" class="image-popup"><img src="${work.image}" alt="Interior" class="img-responsive"></a></p>
-            <c:forEach items="elseImgList" var="elseImg">
-                <img src="${elseImg.img}" alt="Interior" class="img-responsive">
+            <p><a href="${models.modelImg}" class="image-popup"><img src="${models.modelImg}" alt="Model" class="img-responsive"></a></p>
+            <c:forEach items="${elseImgList}" var="elseImg">
+                <c:if test="${work.id == elseImg.work.id}">
+                    <p><a href="${elseImg.img}" class="image-popup"><img src="${elseImg.img}" alt="Interior" class="img-responsive"></a></p>
+                </c:if>
             </c:forEach>
         </div>
-        <div class="col-md-3">
-            <c:url value="/elseImg/add" var="addElseImg"/>
-            <form:form action="${addElseImg}" method="post" modelAttribute="emptyElseImg" enctype="multipart/form-data">
-                <div class="form-group col-md-6">
-                    <input type="file" name="img" class="form-control-file" formenctype="multipart/form-data" id="exampleFormControlFile1">
-                </div>
-                <form:input type="hidden" path="id" readonly="true"/>
-                <div class="form-group">
-                    <input type="submit" class="btn btn-primary" id="submit" name="submit" value="Send Message">
-                </div>
-            </form:form>
-        </div>
+        <c:if test="${!empty work}">
+            <div class="col-md-3">
+                <c:url value="/elseImg/add/${work.id}" var="addElseImg"/>
+                <form:form action="${addElseImg}" method="post" modelAttribute="emptyElseImg" enctype="multipart/form-data">
+                    <div class="form-group col-md-6">
+                        <input type="file" name="img" class="form-control-file" formenctype="multipart/form-data" id="exampleFormControlFile1">
+                    </div>
+                    <form:input type="hidden" path="id" readonly="true"/>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-primary" id="submit" name="submit" value="Send Message">
+                    </div>
+                </form:form>
+            </div>
+        </c:if>
+        <c:if test="${!empty models}">
+            <div class="col-md-3">
+                <c:url value="/elseImg/add/${models.id}" var="addElseImg"/>
+                <form:form action="${addElseImg}" method="post" modelAttribute="emptyElseImg" enctype="multipart/form-data">
+                    <div class="form-group col-md-6">
+                        <input type="file" name="img" class="form-control-file" formenctype="multipart/form-data" id="exampleFormControlFile1">
+                    </div>
+                    <form:input type="hidden" path="id" readonly="true"/>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-primary" id="submit" name="submit" value="Send Message">
+                    </div>
+                </form:form>
+            </div>
+        </c:if>
+
 
 
     </div>

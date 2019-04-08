@@ -144,7 +144,7 @@
                                 <li class="mb20">
                                     <a href="#">
                                         <h4>${models.modelTitle}</h4>
-                                        <figure><img src="${models.modelImg}" alt="interior" class="img-responsive"></figure>
+                                        <figure><a href="elseImg/${models.id}"><img src="${models.modelImg}" alt="interior" class="img-responsive"></a></figure>
                                         <div class="text">
                                             <p>${models.modelDescription}</p>
                                             <a href="modelRemove/${model.id}">remove</a>

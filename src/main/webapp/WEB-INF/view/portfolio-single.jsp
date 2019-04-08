@@ -69,8 +69,12 @@
         </div>
         <div class="col-md-9 col-md-pull-3">
             <p><a href="${work.image}" class="image-popup"><img src="${work.image}" alt="Interior" class="img-responsive"></a></p>
-            <%--<p><a href="img/img_2.jpg" class="image-popup"><img src="img/img_2.jpg" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></a></p>--%>
-            <%--<p><a href="img/img_4.jpg" class="image-popup"><img src="img/img_4.jpg" alt="Free Bootstrap Template by ProBootstrap.com" class="img-responsive"></a></p>--%>
+
+            <c:forEach items="${elseImgList}" var="elseImg">
+                <c:if test="${work.id == elseImg.work.id}">
+                    <p><a href="${elseImg.img}" class="image-popup"><img src="${elseImg.img}" alt="Interior" class="img-responsive"></a></p>
+                </c:if>
+            </c:forEach>
         </div>
     </div>
 </section>
