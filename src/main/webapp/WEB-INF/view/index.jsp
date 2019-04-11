@@ -5,7 +5,7 @@
 <!-- START: header -->
 <header role="banner" class="probootstrap-header">
     <div class="container-fluid">
-        <a href="/index" class="probootstrap-logo">Yaruna Site</a>
+        <a href="/index" class="probootstrap-logo">My LOGO_Site</a>
 
         <a href="#" class="probootstrap-burger-menu visible-xs" ><i>Menu</i></a>
         <div class="mobile-menu-overlay"></div>
@@ -18,7 +18,6 @@
                 <li><a href="#" data-toggle="modal" data-target="#myModal">Registration</a></li>
                 <li><a href="/about">About</a></li>
                 <li><a href="/contact">Contact</a></li>
-                <li><a href="/admin">Admin</a></li>
             </ul>
             <div class="extra-text visible-xs">
                 <a href="#" class="probootstrap-burger-menu"><i>Menu</i></a>
@@ -51,22 +50,6 @@
     <a class="probootstrap-scroll-down js-next" href="#next-section">Scroll down <i class="icon-chevron-down"></i></a>
 </section>
 <!-- END: header -->
-<!-- START: section -->
-<section class="probootstrap-section probootstrap-bg-white">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 probootstrap-animate">
-                <h2 class="mb0">Welcome To My Website</h2>
-                <p class="lead mt0">Another website template by <a href="https://probootstrap.com/">ProBootstrap.com</a></p>
-            </div>
-            <div class="col-md-6 probootstrap-animate">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid dolorum saepe magnam natus perferendis corrupti tenetur quidem suscipit eaque blanditiis corporis veniam molestias qui culpa veritatis officiis eum. Doloribus quos minus quas reprehenderit! Ad provident sunt totam culpa tenetur? Libero maxime molestiae cumque excepturi. </p>
-                <p>Eveniet tempora a nisi aut debitis! Recusandae dolores vero autem expedita nihil asperiores maxime modi ducimus nemo dicta nulla dolore? Inventore necessitatibus non laboriosam eos quod dignissimos soluta sunt id fugiat debitis nam omnis? A ullam minima excepturi nulla totam necessitatibus illum modi exercitationem blanditiis quaerat at fugit ad eveniet ipsum error quod sit cumque impedit!</p>
-            </div>
-        </div>
-    </div>
-</section>
-
 
 
 <!-- START: section -->
@@ -198,6 +181,7 @@
                 </div>
             </div>
         </div>
+    </div>
 </footer>
 <!-- END: footer -->
 <!-- Modal1 -->

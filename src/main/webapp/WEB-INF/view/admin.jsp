@@ -35,28 +35,40 @@
 </header>
 <!-- END: header -->
 
+<!-- START: section -->
+<section class="probootstrap-intro" style="background-image: url(../../resources/img/hero_bg_2.jpg);" data-stellar-background-ratio="0.5">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-7 probootstrap-intro-text">
+                <h1 class="probootstrap-animate">It is Admin page</h1>
+                <div class="probootstrap-subtitle probootstrap-animate">
+                    <h2>Access do not have<a href="https://probootstrap.com/" target="_blank">yaruna.com</a></h2>
+                </div>
+                <p class="watch-intro probootstrap-animate"><a href="https://vimeo.com/45830194" class="popup-vimeo">Watch the video <i class="icon-play2"></i></a></p>
+            </div>
+        </div>
+    </div>
+    <a class="probootstrap-scroll-down js-next" href="#next-section">Scroll down <i class="icon-chevron-down"></i></a>
+</section>
+<!-- END: header -->
+
 <section class="next-section">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
 
             <div class="col-md-8">
-                <div class="probootstrap-footer-widget">
+                <div class="probootstrap-footer-widget probootstrap-gutter0">
                     <h2 class="text-center">Interior</h2>
                     <c:forEach items="${workList}" var="work">
-                        <div class="col-md-2">
-                            <ul class="probootstrap-product-list">
-                                <li class="mb20">
-                                    <a href="#">
-                                        <h4>${work.title}</h4>
-                                        <figure><a href="elseImg/${work.id}"><img src="${work.image}" alt="interior" class="img-responsive"></a></figure>
-                                        <div class="text">
-                                            <p>${work.description}</p>
-                                            <a href="portfolioRemove/${work.id}">remove</a>
-                                            <p class="secondary-color rate"><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-half"></i></p>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
+                        <div class="col-md-4 col-sm-6">
+                            <a href="<c:url value='elseImg/${work.id}'/>" class="probootstrap-hover-overlay">
+                                <img src="${work.image}" alt="interior" class="img-responsive">
+                                <div class="probootstrap-text-overlay">
+                                    <h3>${work.title}</h3>
+                                    <p>${work.style}</p>
+                                        <%--<a href="<c:url value='/portfolioRemove/${work.id}'/>">Delete</a>--%>
+                                </div>
+                            </a>
                         </div>
                     </c:forEach>
                 </div>
@@ -102,26 +114,21 @@
 
 
 <section>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-md-8">
-                <div class="probootstrap-footer-widget">
+                <div class="probootstrap-footer-widget  probootstrap-gutter0">
                     <h2 class="text-center">Models</h2>
                     <c:forEach items="${modelList}" var="models">
-                        <div class="col-md-4">
-                            <ul class="probootstrap-product-list">
-                                <li class="mb20">
-                                    <a href="#">
-                                        <h4>${models.modelTitle}</h4>
-                                        <figure><a href="elseImg/${models.id}"><img src="${models.modelImg}" alt="interior" class="img-responsive"></a></figure>
-                                        <div class="text">
-                                            <p>${models.modelDescription}</p>
-                                            <a href="modelRemove/${model.id}">remove</a>
-                                            <p class="secondary-color rate"><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-half"></i></p>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
+                        <div class="col-md-4 col-sm-6">
+                            <a href="<c:url value='elseImg/${models.id}'/>" class="probootstrap-hover-overlay">
+                                <img src="${models.modelImg}" alt="interior" class="img-responsive">
+                                <div class="probootstrap-text-overlay">
+                                    <h3>${models.modelTitle}</h3>
+                                    <p>${models.modelStyle}</p>
+                                        <%--<a href="<c:url value='/portfolioRemove/${work.id}'/>">Delete</a>--%>
+                                </div>
+                            </a>
                         </div>
                     </c:forEach>
                 </div>

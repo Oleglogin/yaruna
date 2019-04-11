@@ -4,7 +4,7 @@
 <!-- START: header -->
 <header role="banner" class="probootstrap-header">
     <div class="container-fluid">
-        <a href="/index" class="probootstrap-logo">Yaruna Site></a>
+        <a href="/index" class="probootstrap-logo">My LOGO_Site</a>
 
         <a href="#" class="probootstrap-burger-menu visible-xs" ><i>Menu</i></a>
         <div class="mobile-menu-overlay"></div>
